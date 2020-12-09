@@ -4,29 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fetch-A-Dog</title>
-    <link rel="shortcut icon" href="#">
+    <title>Fetch-A-Breed</title>
+    <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html">Back to Homepage</a>
-    </header>
     <div class="container">
-        <h1>How many dog pics would you like?</h1>
-
+        <h1>Fetch-A-Breed</h1>
+           
         <form>
-          <input type="number" id="quantity" name="quantity" min="1" max ="50" value="3">   
-          <input type="submit" value="Get some dog pics!">
+             <label for="breed">Breed</label>
+      <input type="search" name="phone" id="breed" placeholder="Enter Breed" title="dog breeds"/>
+
+          <input type="submit" value="Get a dog pic!">
         </form>
         <section class="results hidden">
-            <h2>Look at these dogs!</h2>
-            <div class="results-img"></div>   
-          </section>
+          <h2>Look at this dog!</h2>
+          <img class="results-img" alt="placeholder">
+        </section>
     </div>
-    <footer>
-        <a href="index.html">Back to Homepage</a>
-    </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
