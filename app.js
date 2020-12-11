@@ -27,9 +27,7 @@ function displayResults(responseJson) {
           console.log("Pick a new dog breed please!");
       } else {
         $('.results h2').html(`Here is a picture of a ${breedOfDog}:`);
-            html += `<img src="${responseJson.message[i]}" />`
-        
-          
+            html += `<img src="${responseJson.message}" />`
       }
     
       $('.results').html(html)
