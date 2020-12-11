@@ -5,13 +5,17 @@ function getDogImage(breed) {
     .then(response => response.json())
     .then(responseJson => 
       displayResults(responseJson))
-    .catch(error => alert('Something went wrong. Try again later.'));
+    .catch(error => {
+      console.log(error);
+      alert('Something went wrong. Try again later.')
+    });
 }
 
 function displayResults(responseJson) {
   console.log(responseJson);
   let html = '';
       if (responseJson.code === 404) {
+        let breedOfDog = $('input[type="test"]').val();
           html += `Sorry, the ${breedOfDog} dog breed does not exist in the database!<br>
           <img src="https://beingcricky.com/wp-content/uploads/2020/07/1595625158095.jpg" alt="sad pup"><br>
           Maybe try these dog breeds:
@@ -28,7 +32,7 @@ function displayResults(responseJson) {
           html += `<img src="${responseJson.message[i]}" />`
       }
     }
-      $('.results-img').html(html)
+      $('.results').html(html)
       //replace the existing image with the new one
       //display the results section
       $('.results').removeClass('hidden');
