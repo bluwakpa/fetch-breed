@@ -26,12 +26,12 @@ function displayResults(responseJson) {
           </ul>`;
           console.log("Pick a new dog breed please!");
       } else {
-        let breedOfDog = $('input[type="test"]').val();
-        html += `Here is a picture of a ${breedOfDog}:`;
-        for (let i = 0; i < responseJson.message.length; i++) {
-          html += `<img src="${responseJson.message[i]}" />`
+        $('.results h2').html(`Here is a picture of a ${breedOfDog}:`);
+            html += `<img src="${responseJson.message[i]}" />`
+        
+          
       }
-    }
+    
       $('.results').html(html)
       //replace the existing image with the new one
       //display the results section
