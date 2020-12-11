@@ -14,8 +14,8 @@ function getDogImage(breed) {
 function displayResults(responseJson) {
   console.log(responseJson);
   let html = '';
+  let breedOfDog = $('input[type="test"]').val();
       if (responseJson.code === 404) {
-        let breedOfDog = $('input[type="test"]').val();
           html += `Sorry, the ${breedOfDog} dog breed does not exist in the database!<br>
           <img src="https://beingcricky.com/wp-content/uploads/2020/07/1595625158095.jpg" alt="sad pup"><br>
           Maybe try these dog breeds:
